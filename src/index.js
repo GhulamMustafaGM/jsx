@@ -7,6 +7,10 @@ function getButtonText() {
     return 'Click on me!';
 }
 
+function getTime() {
+    return (new Date()).toLocaleTimeString()
+}
+
 // Create a react component 
 
 const App = () => {
@@ -16,6 +20,8 @@ const App = () => {
             <lable class = "lable" for="name">Enter name: </lable>
             <input id="name" type = "text" />
             <button style={{ backgroundColor: 'blue', color: 'white'}}> {getButtonText()} </button>
+            <div>Current Time:</div>
+            <h3>{getTime()}</h3>
         </div>
     );
 };
